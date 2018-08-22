@@ -12,5 +12,14 @@
             "homepage": "https://www.vanderbilthealth.com",
             "role": "Drupal Developer"
         }
-    ]
+    ],
+    "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+    ],
+    "require": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
