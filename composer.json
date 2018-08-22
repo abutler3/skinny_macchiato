@@ -1,0 +1,16 @@
+{
+    "name": "abutler3/skinny_macchiato",
+    "description": "Package for Macchiato subtheme on Drupal 8",
+    "type": "drupal-custom-theme",
+    "keywords": ["Drupal 8","subtheme","Macchiato"],
+    "homepage": "https://github.com/stevenvdhout/paragraphs_frontend_ui",
+    "license": "",
+    "authors": [
+        {
+            "name": "VUMC",
+            "email": "sitebuilder@vumc.org",
+            "homepage": "https://www.vanderbilthealth.com",
+            "role": "Drupal Developer"
+        }
+    ]
+}
