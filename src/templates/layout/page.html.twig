@@ -1,0 +1,124 @@
+<!-- Macchiato page.html.twig -->
+
+<!-- Topbar -->
+
+<!-- end Topbar -->
+
+<!-- Site Banner -->
+<div class="banner" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <div class="wrapper-form-search {{ sitename_is_prefixed ? 'title-has-prefix' }}" id="searchFormWrapper">
+          <form class="form-search" method="get" accept-charset="UTF-8" action="{{ base_path }}search" role="search">
+            <div class="container-search-button-and-arrow">
+              <button name="op" value="Search" class="btn-search-submit" type="submit"><i class="fa fa-search"></i><span class="sr-only">Submit</span></button>
+            </div>
+
+            <div class="wrapper-input-search">
+              <label>
+                <span class="sr-only">Search</span>
+                <input maxlength="255" name="search" value="" class="form-control" type="search" placeholder="Search">
+                <span></span>
+              </label>
+            </div>
+          </form>  {# form-search #}
+        </div> {# wrapper-form-search #}
+
+        <div class="wrapper-header-site">
+          {% if act_like_vusm_homepage %}
+            <h1 class="header-site">
+              <a href="/">
+                <img src="{{ theme_path }}/assets/images/logo-stacked.png"
+                  data-retina-src="{{ theme_path }}/assets/images/logo-stacked@2x.png"
+                  alt="Vanderbilt University School of Medicine" width="350" height="51" />
+              </a>
+            </h1>
+
+          {% else %}
+
+            <h1 class="header-site">
+              <a href="{{ front_page }}" title="Home" rel="home">{{ formatted_site_name|raw }}</a>
+            </h1>
+
+            {{ parent_entity_links|raw }}
+
+          {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+
+    {# Dropdown menu #}
+    <div class="row wrapper-nav-site" id="siteNavWrapper">
+      <div class="col-sm-12">
+        <nav class="nav-site" id="siteNav" role="navigation">
+          {{ dropdown_menu|raw }}
+        </nav>
+        <span id="cssMonitorDropdownMenu"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end Site Banner -->
+
+<!-- Featured -->
+{{ page.featured }}
+<!-- end Featured -->
+
+<!-- Page Container -->
+<div class="container">
+  <!-- Main Content Container -->
+  <div class="row main-content-container">
+    <!-- Main content column.  In a two column layout, this section is class span8.  For a full width layout, choose span12 -->
+
+    <!-- Section Main Content -->
+    {% if page.sidebar_first is not empty %}
+      <section class="col-sm-8 section-main-content" role="main" id="main">
+    {% else %}
+      <section class="col-sm-12 section-main-content" role="main" id="main">
+    {% endif %}
+
+      {{ page.content }}
+
+      {{ feed_icons }}
+
+    </section>
+    <!-- end Section Main Content -->
+
+    <!-- Sidebar column -->
+    {% if page.sidebar_first is not null %}
+      <div class="col-sm-4 sidebar" role="complementary">
+        <div class="sidebar-inner">
+          {{ page.sidebar_first }}
+        </div>
+      </div>
+    {% endif %}
+    <!-- end Sidebar column -->
+  </div>
+  <!-- end Main Content Container -->
+
+  <!-- Site Footer -->
+  <footer class="row footer" role="contentinfo">
+    <div class="col-sm-12">
+      <hr />
+
+      <div class="footer-logo-container">
+
+      </div>
+
+      <small>
+        
+      </small>
+
+    </div>
+  </footer>
+  <!-- end of Site Footer -->
+
+</div>
+<!-- end Page Container -->
+
+<!-- end Macchiato page.html.twig -->

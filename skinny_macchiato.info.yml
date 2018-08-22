@@ -1,0 +1,10 @@
+name: Skinny Macchiato
+type: theme
+description: 'Skinny Macchiato is a modern, responsive, HTML5, accessible unbranded theme for Vanderbilt University School of Medicine'
+core: 8.x
+base theme: macchiato
+
+regions:
+  featured: Featured
+  content: Content
+  sidebar_first: Sidebar
