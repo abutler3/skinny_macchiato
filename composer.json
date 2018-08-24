@@ -1,7 +1,7 @@
 {
     "name": "abutler3/skinny_macchiato",
     "description": "Package for Macchiato subtheme on Drupal 8",
-    "type": "drupal-custom-theme",
+    "type": "drupal-theme",
     "keywords": ["Drupal 8","subtheme","Macchiato"],
     "homepage": "https://github.com/abutler3/skinny_macchiato",
     "license": "",
