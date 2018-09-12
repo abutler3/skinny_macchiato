@@ -11,15 +11,19 @@
       <div class="col-sm-12">
 
         <div class="wrapper-form-search {{ sitename_is_prefixed ? 'title-has-prefix' }}" id="searchFormWrapper">
-          <form class="form-search" method="get" accept-charset="UTF-8" action="{{ base_path }}search" role="search">
+          <form class="form-search" method="get" accept-charset="UTF-8" action="https://search.vumc.org" role="search">
             <div class="container-search-button-and-arrow">
-              <button name="op" value="Search" class="btn-search-submit" type="submit"><i class="fa fa-search"></i><span class="sr-only">Submit</span></button>
+              <button name="op" value="Search" class="btn-search-submit" type="submit"><i class="fa fa-search"></i><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
             </div>
 
             <div class="wrapper-input-search">
               <label>
                 <span class="sr-only">Search</span>
-                <input maxlength="255" name="search" value="" class="form-control" type="search" placeholder="Search">
+                <input id="mcSearchInput" type="text" maxlength="255" name="query" value="" class="form-control" type="search" placeholder="Search">
+                <input type="hidden" name="pipeline" value="MC-vumc-org-drupal">
+                <input type="hidden" name="collection" value="Vanderbilt">
+                <input type="hidden" name="collection_ss" value="default_collection">
+                <input type="hidden" name="site" value="vumc.org{{ search_base_path }}">
                 <span></span>
               </label>
             </div>
